@@ -1,0 +1,3 @@
+2025-02-20 19:01:00.356 | INFO     | bot.chatbot:start:21 - User: just wanted to say hi | Bot: I'm sorry, I don't understand that.
+2025-02-20 19:01:11.881 | INFO     | bot.chatbot:start:21 - User: oh oaky | Bot: I'm sorry, I don't understand that.
+2025-02-20 19:01:19.931 | INFO     | bot.chatbot:start:21 - User: python -m unittest discover tests | Bot: I'm sorry, I don't understand that.
