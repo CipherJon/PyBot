@@ -1,70 +1,43 @@
-# Simple Chat Bot
+# Chatbot
 
-This is a simple chat bot written in Python. It uses predefined intents and responses to interact with users.
+A simple chatbot implemented in Python, enhanced with JavaScript.
 
-## File Structure
+## Getting Started
 
-```
-chatbot/
-│
-├── main.py
-├── bot/
-│   ├── __init__.py
-│   ├── chatbot.py
-│   ├── responses.py
-│   └── utils.py
-├── config/
-│   ├── __init__.py
-│   └── settings.py
-├── data/
-│   └── intents.json
-├── logs/
-│   └── bot.log
-├── tests/
-│   ├── __init__.py
-│   ├── test_chatbot.py
-│   └── test_responses.py
-└── requirements.txt
-```
+### Prerequisites
 
-## Setup
+- Python 3
+- Node.js
+- npm
 
-1. Clone the repository:
+### Installing
+
+1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/chatbot.git
+   git clone https://github.com/your-username/chatbot.git
+   ```
+2. Navigate to the project directory
+   ```sh
    cd chatbot
    ```
-
-2. Create a virtual environment and activate it:
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-
-3. Install the dependencies:
+3. Install the Python dependencies
    ```sh
    pip install -r requirements.txt
    ```
-
-4. Run the chat bot:
+4. Navigate to the `js` directory and install the Node.js dependencies
    ```sh
-   python main.py
+   cd js
+   npm install
    ```
 
-5. Run the tests:
-   ```sh
-   python -m unittest discover tests
-   ```
+### Running the Chatbot
 
-## Usage
-
-Run the chat bot using:
 ```sh
 python main.py
 ```
 
-Interact with the bot by typing messages. Type `exit`, `quit`, or `bye` to end the conversation.
+### Running Tests
 
-## Logs
-
-Logs are stored in the `logs/bot.log` file. These logs include user inputs and bot responses.
+```sh
+pytest
+```

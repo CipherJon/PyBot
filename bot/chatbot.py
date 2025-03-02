@@ -1,21 +1,26 @@
-from loguru import logger
-from bot.responses import get_response
+import subprocess
+import json
 
-class ChatBot:
-    def __init__(self, name):
-        self.name = name
-        self.setup_logging()
-    
-    def setup_logging(self):
-        logger.add("logs/bot.log", rotation="1 MB")
-    
-    def start(self):
-        print(f"Hello! I am {self.name}. How can I assist you today?")
-        while True:
-            user_input = input("You: ")
-            if user_input.lower() in ['exit', 'quit', 'bye']:
-                print("Goodbye!")
-                break
-            response = get_response(user_input)
-            print(f"{self.name}: {response}")
-            logger.info(f"User: {user_input} | Bot: {response}")
+class Chatbot:
+    def __init__(self, intents):
+        self.intents = intents
+
+    def get_response(self, message):
+        intent = self.get_intent(message)
+        if intent:
+            # Call the JavaScript chatbot script
+            process = subprocess.Popen(['node', 'js/chatbot.js'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, stderr = process.communicate(input=intent.encode())
+
+            if stderr:
+                raise Exception(f"Error in JS chatbot: {stderr.decode()}")
+
+            return stdout.decode().strip()
+        else:
+            return "I'm sorry, I don't understand."
+
+    def get_intent(self, message):
+        for intent in self.intents:
+            if intent['keyword'] in message.lower():
+                return intent['name']
+        return None

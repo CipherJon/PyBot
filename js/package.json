@@ -1,0 +1,15 @@
+{
+    "name": "chatbot-js",
+    "version": "1.0.0",
+    "description": "JavaScript part of the Python chatbot project",
+    "main": "chatbot.js",
+    "scripts": {
+      "start": "node chatbot.js"
+    },
+    "dependencies": {},
+    "author": "CipherJon",
+    "license": "MIT"
+  }
+
+
+

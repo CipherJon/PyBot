@@ -1,9 +1,15 @@
-from bot.chatbot import ChatBot
-from config.settings import BOT_NAME
+import json
+from bot.chatbot import Chatbot
+from config import settings
 
-def main():
-    bot = ChatBot(BOT_NAME)
-    bot.start()
+with open('data/intents.json') as f:
+    intents = json.load(f)
 
-if __name__ == "__main__":
-    main()
+chatbot = Chatbot(intents)
+
+print(f"{settings.BOT_NAME} is now running...")
+
+while True:
+    message = input("You: ")
+    response = chatbot.get_response(message)
+    print(f"Bot: {response}")
