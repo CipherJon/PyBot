@@ -1,10 +1,49 @@
 [
     {
-        "name": "greeting",
-        "keyword": "hello"
+        "tag": "greeting",
+        "patterns": [
+            "Hi", "Hello", "Hey", "Good morning", "Good afternoon"
+        ],
+        "responses": [
+            "Hello! How can I assist you today?"
+        ]
     },
     {
-        "name": "farewell",
-        "keyword": "bye"
+        "tag": "farewell",
+        "patterns": [
+            "Bye", "Goodbye", "See you later", "Have a nice day"
+        ],
+        "responses": [
+            "Goodbye! Have a wonderful day!"
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thank you", "Thanks", "Appreciate it", "Cheers"
+        ],
+        "responses": [
+            "You're welcome!",
+            "Happy to help!"
+        ]
+    },
+    {
+        "tag": "hours",
+        "patterns": [
+            "When are you open?",
+            "What are your hours?",
+            "Are you open now?"
+        ],
+        "responses": [
+            "We're open 24/7!",
+            "Our virtual assistant is always available"
+        ]
+    },
+    {
+        "tag": "unknown",
+        "patterns": ["*", "?", ""],
+        "responses": [
+            "I'm sorry, I don't understand."
+        ]
     }
 ]

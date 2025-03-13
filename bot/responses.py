@@ -7,14 +7,16 @@ def load_intents():
 def get_response(user_input):
     if user_input.lower() == "goodbye":
         close_program()
-    intents = load_intents()
-    for intent in intents:
-        if intent['keyword'] in user_input.lower():
-            return generate_response(intent['name'])
-    return "I'm sorry, I don't understand."
+    user_input = user_input.lower()
+    if "hello" in user_input:
+        return generate_response("greeting")
+    elif "bye" in user_input or "goodbye" in user_input:
+        return generate_response("farewell")
+    else:
+        return generate_response("unknown")
 
 def close_program():
-    print("Goodbye! Have a great day!")
+    print("Goodbye! Have a wonderful day!")
     exit()
 
 def generate_response(intent_name):

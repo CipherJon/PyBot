@@ -5,7 +5,7 @@ from config import settings
 with open('data/intents.json') as f:
     intents = json.load(f)
 
-chatbot = Chatbot(intents)
+chatbot = Chatbot('data/intents.json')
 
 print(f"{settings.BOT_NAME} is now running...")
 

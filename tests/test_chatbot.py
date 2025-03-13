@@ -4,9 +4,7 @@ import json
 
 class TestChatbot(unittest.TestCase):
     def setUp(self):
-        with open('data/intents.json') as f:
-            intents = json.load(f)
-        self.chatbot = Chatbot(intents)
+        self.chatbot = Chatbot()
 
     def test_greeting(self):
         response = self.chatbot.get_response('hello')
