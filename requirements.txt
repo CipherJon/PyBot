@@ -1,3 +1,8 @@
 nltk==3.8.1
 scikit-learn==1.4.0
 python-dotenv==1.0.0
+flask==2.2.5
+werkzeug==2.2.3
+flask-login==0.6.2
+flask-sqlalchemy==3.1.1
+bcrypt==4.1.2
