@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chatBox');
     const userInput = document.getElementById('userInput');
+    const sendButton = document.getElementById('sendButton');
     
     function addMessage(message, isUser = true) {
         const msgDiv = document.createElement('div');
@@ -9,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         chatBox.appendChild(msgDiv);
         chatBox.scrollTop = chatBox.scrollHeight;
     }
+
+    sendButton.addEventListener('click', sendMessage);
 
     async function sendMessage() {
         const message = userInput.value.trim();

@@ -25,12 +25,17 @@ input[type="text"] {
     font-size: 16px;
 }
 
-button {
+#sendButton {
     padding: 10px 20px;
     background: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+#sendButton:hover {
+    background: #0056b3;
 }
 
 .user-message {
