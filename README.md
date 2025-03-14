@@ -2,6 +2,14 @@
 
 A simple chatbot implemented in Python, enhanced with JavaScript.
 
+## Compatibility
+
+- Python 3.8+
+- Node.js 16+
+- Windows/Linux/macOS
+- Modern browsers (Chrome, Firefox, Edge, Safari)
+- SQLite database (included)
+
 ## Getting Started
 
 ### Prerequisites
@@ -32,8 +40,26 @@ A simple chatbot implemented in Python, enhanced with JavaScript.
 
 ### Running the Chatbot
 
+1. Start the Python backend:
 ```sh
 python main.py
+```
+
+2. In a new terminal, start the Node.js server:
+```sh
+cd js
+npm start
+```
+
+3. Access the web interface at:
+`http://localhost:3000`
+
+**Example Usage:**
+```sh
+User: Hello
+Bot: Hi there! How can I help you today?
+User: What's the weather?
+Bot: I can check the weather for any location.
 ```
 
 ### Running Tests
